@@ -15,11 +15,27 @@
     
 """
 
-def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+def ask_user(some_QA_dict):
+  while True:
+    print('Бот: Ну что... поговорим? ')
+    user_reply = input('Пользователь: ')
+
+    if user_reply in some_QA_dict.keys():
+      print(some_QA_dict[user_reply])
+      break
+    else:
+      print('Спроси ка что-нибудь еще')
+
+
+
     
 if __name__ == "__main__":
-    ask_user()
+
+  QA_dict_1 = {
+    'Что делаешь?': 'слежу за тобой О_о', 
+    'Зачем ты это делаешь?': 'Ты разве против О_О', 
+    'Кто ты?': 'Это не важно -_-'
+  }
+
+
+  ask_user(QA_dict_1)
